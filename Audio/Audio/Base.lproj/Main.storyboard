@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Audio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awi-tL-oBU">
+                                <rect key="frame" x="294" y="795" width="100" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="OxK-XF-UkQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="dnI-bp-uBR"/>
+                                </constraints>
+                                <state key="normal" title="StopEngine"/>
+                                <connections>
+                                    <action selector="stopEngine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNi-6s-S9r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-yd-DaO">
+                                <rect key="frame" x="20" y="795" width="100" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fc7-27-Gku"/>
+                                    <constraint firstAttribute="height" constant="52" id="KYa-D6-Tg1"/>
+                                </constraints>
+                                <state key="normal" title="StartEngine"/>
+                                <connections>
+                                    <action selector="startEngine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E1s-5a-Cb1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCa-cB-Vq4" customClass="AudioPlotView" customModule="Audio" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="398" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="l0E-UM-dDM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dE-TE-rvB">
+                                <rect key="frame" x="189" y="44" width="36" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1b1-vu-Ama"/>
+                                    <constraint firstAttribute="width" constant="36" id="dEa-4W-wun"/>
+                                </constraints>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l8I-0n-Twu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnm-w8-Wix">
+                                <rect key="frame" x="196" y="806" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Shift"/>
+                                <connections>
+                                    <action selector="shiftWaveForm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PyK-XD-CJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LCa-cB-Vq4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="49s-5Q-uVH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LCa-cB-Vq4" secondAttribute="trailing" id="D8N-yn-ICJ"/>
+                            <constraint firstItem="LCa-cB-Vq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PqG-1y-zCL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QBr-yd-DaO" secondAttribute="bottom" constant="15" id="TV2-hg-xRD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="awi-tL-oBU" secondAttribute="bottom" constant="15" id="YRB-77-aJl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="awi-tL-oBU" secondAttribute="trailing" constant="20" id="cRU-fy-uyG"/>
+                            <constraint firstItem="QBr-yd-DaO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hjI-I7-iSu"/>
+                            <constraint firstItem="2dE-TE-rvB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k6y-4t-mDg"/>
+                            <constraint firstItem="2dE-TE-rvB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sfo-qI-FfL"/>
+                            <constraint firstItem="LCa-cB-Vq4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wOg-AR-BZD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioPlotView" destination="LCa-cB-Vq4" id="Yh2-8r-nxr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+</document>
