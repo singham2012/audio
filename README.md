@@ -1,4 +1,7 @@
 
+https://user-images.githubusercontent.com/84690581/119812746-18b29d80-bf06-11eb-8a7a-3313dc8be8fc.mov
+
+
 # audio
 
 Need to display speech wavefrom on iOS device screen.
